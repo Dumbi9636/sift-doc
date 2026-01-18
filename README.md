@@ -56,6 +56,8 @@ Sift는 문서 파일을 업로드하면 핵심 정보를 추출하고 요약해
 
 ## 📁 프로젝트 구조
 sift-doc/
+
 ├─ frontend/ # React 프론트엔드
+
 └─ backend/ # FastAPI 백엔드
 ---
