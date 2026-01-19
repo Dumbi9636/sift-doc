@@ -10,7 +10,8 @@ export async function uploadDocument(file) {
   });
 
   if (!res.ok) {
-    throw new Error("파일 업로드 실패");
+    const text = await res.text().catch(() => "");
+    throw new Error(text || "파일 업로드 실패");
   }
 
   return res.json();

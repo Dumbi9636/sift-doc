@@ -27,6 +27,7 @@ backend/.ruff_cache/
 backend/.env
 backend/.env.*
 backend/*.sqlite3
+backend/uploads/
 
 # --- Python general ---
 __pycache__/

@@ -3,9 +3,7 @@ import { useState } from "react";
 const FileUploader = ({ onSubmit }) => {
   const [file, setFile] = useState(null);
 
-  const handleChange = (e) => {
-    setFile(e.target.files[0]);
-  };
+  const handleChange = (e) => setFile(e.target.files?.[0] ?? null);
 
   const handleSubmit = () => {
     if (!file) {
@@ -16,7 +14,7 @@ const FileUploader = ({ onSubmit }) => {
   };
 
   return (
-    <div>
+    <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
       <input type="file" onChange={handleChange} />
       <button onClick={handleSubmit}>업로드</button>
     </div>
