@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.INFO)
 
 app = FastAPI(title="Sift API", version="0.1.0")
 
-# 개발 단계 CORS (나중에 배포 시 도메인 제한 예정)
+# 개발 단계 CORS 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
