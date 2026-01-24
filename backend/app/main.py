@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api.documents import router as documents_router
+# from app.api.documents import router as documents_router
 from app.routers.extract_txt import router as extract_txt_router
 from app.routers.summarize import router as summarize_router
 from app.routers.pipeline import router as pipeline_router
@@ -26,7 +26,7 @@ def health_check():
     return {"status": "ok", "service": "sift-backend"}
 
 # router 등록 
-app.include_router(documents_router) # 문서
+# app.include_router(documents_router) # 문서
 app.include_router(extract_txt_router) # 텍스트 추출
 app.include_router(summarize_router) # Ollama 요약 
 app.include_router(pipeline_router) # 텍스트 추출 + Ollama 요약 pipeline
